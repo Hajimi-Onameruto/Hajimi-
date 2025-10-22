@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shape of Experience — Landing</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #faf7f4;
+      --muted: #9b948e;
+      --accent: #c9b79e;
+      --text: #1e1b19;
+      --card-bg: rgba(255,255,255,0.6);
+      --maxw: 1200px;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      background: var(--bg);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+    }
+
+    .wrap{
+      max-width: var(--maxw);
+      margin: 40px auto;
+      padding: 28px 24px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .topnav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      font-family: "Playfair Display", serif;
+      letter-spacing: 0.12em;
+      font-size:20px;
+      color:var(--text);
+      text-transform: uppercase;
+    }
+    .navlinks{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      opacity:0.9;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap: 36px;
+      align-items: center;
+      margin-top:36px;
+      min-height: 60vh;
+    }
+
+    .hero-left{
+      position:relative;
+      padding: 36px 0;
+    }
+    .hero-title{
+      font-family: "Playfair Display", serif;
+      font-size:64px;
+      line-height:0.95;
+      margin:0 0 12px 0;
+      color:var(--text);
+    }
+    .hero-sub{
+      color:var(--muted);
+      margin-bottom:28px;
+      font-size:16px;
+    }
+
+    .hero-visual{
+      margin-top: 18px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+    }
+    .necklace{
+      width: 360px;
+      max-width: 60%;
+      display:block;
+      filter: drop-shadow(0 18px 30px rgba(30,27,25,0.06));
+    }
+
+    .sidecard{
+      background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));
+      border-left: 1px solid rgba(30,27,25,0.05);
+      padding: 22px;
+      box-shadow: 0 6px 18px rgba(20,18,16,0.03);
+      height: fit-content;
+      position: relative;
+    }
+    .sidecard h4{
+      margin:6px 0 12px 0;
+      font-family: "Playfair Display", serif;
+      font-size:20px;
+      color: #9a805f;
+    }
+    .sidecard p{ margin:0; color:var(--muted); font-size:14px; line-height:1.45;}
+    .watch-preview{
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .watch-preview img{ width:72px; height:72px; object-fit:contain; border-radius:6px; }
+
+    .cta{
+      margin-top:28px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .btn{
+      background:var(--text);
+      color:#fff;
+      padding:12px 18px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:15px;
+      box-shadow: 0 8px 22px rgba(30,27,25,0.08);
+      cursor:pointer;
+    }
+    .btn-ghost{
+      border:1px solid rgba(30,27,25,0.06);
+      padding:10px 16px;
+      border-radius:6px;
+      background:transparent;
+      color:var(--muted);
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    .footnote{
+      margin-top:44px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width:900px){
+      .hero{ grid-template-columns: 1fr; gap:24px;}
+      .necklace{ width:240px; max-width:80%;}
+      .hero-title{ font-size:40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topnav">
+      <div class="brand">Bijoupiko<span style="opacity:.25;margin-left:8px;font-size:12px">—Style</span></div>
+      <nav class="navlinks">
+        <div>Bridal</div>
+        <div>Jewelry</div>
+        <div>Watch</div>
+        <div>Diamond</div>
+        <div style="opacity:.6">About</div>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="hero-left">
+        <h1 class="hero-title">Shape of<br>Experience</h1>
+        <div class="hero-sub">体验を、かたちに。</div>
+
+        <div class="hero-visual">
+          <img class="necklace" src="hero.jpg" alt="主视觉图片">
+        </div>
+
+        <div class="footnote">
+          点击下方按钮即可前往视频页面。
+        </div>
+
+        <div class="cta">
+          <a class="btn" id="openVideo">立即观看视频</a>
+          <a class="btn-ghost" href="#more">了解更多</a>
+        </div>
+      </section>
+
+      <aside class="sidecard">
+        <h4>Jewelry</h4>
+        <p>ビジュピコが選ぶ洗練された美しいデザインと質感でお届けする高品質のジュエリー。経験を形にする一品を。</p>
+
+        <div class="watch-preview">
+          <img src="watch.jpg" alt="手表示意">
+          <div>
+            <div style="font-weight:600; color:var(--text)">Watch</div>
+            <div style="font-size:13px; color:var(--muted)">タイムピースの精緻な技術</div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('openVideo').addEventListener('click', function() {
+      window.open("https://www.bilibili.com/video/BV1iXXhYpEcw/?spm_id_from=333.337.search-card.all.click&vd_source=665d4578a4cc8aef020523ad5d631343");
+    });
+  </script>
+</body>
+</html>
